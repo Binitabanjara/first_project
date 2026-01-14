@@ -1,70 +1,108 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to right, #ffd6e0, #ffe6f0);
+/* Color Palette - Change these to change the whole site! */
+:root {
+    --primary-green: #2e7d32;    /* Dark Forest Green */
+    --light-green: #e8f5e9;      /* Very Light Mint */
+    --accent-green: #4caf50;     /* Fresh Grass Green */
+    --dark-text: #1b5e20;        /* Deep Green text */
+    --white: #ffffff;
 }
 
-.center {
+/* Basic Setup */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--light-green); /* Light green background */
+    margin: 0;
+    text-align: center;
+    color: var(--dark-text);
+}
+
+/* Top Banner */
+.top-banner {
+    background-color: var(--primary-green);
+    color: var(--white);
+    padding: 50px 20px;
+}
+
+.top-banner h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+/* Main Content Area */
+.container {
+    padding: 40px 20px;
+}
+
+/* Grid for the 3 Cards */
+.button-grid {
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.card {
-    background: white;
-    padding: 30px;
-    border-radius: 12px;
-    width: 300px;
-    text-align: center;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
-
-input, textarea, select {
-    width: 100%;
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-}
-
-button {
-    background: #ff4d6d;
-    color: white;
-    border: none;
-    padding: 10px;
-    width: 100%;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-button:hover {
-    background: #e63950;
-}
-
-header {
-    background: #ff4d6d;
-    color: white;
-    padding: 15px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.container {
-    display: flex;
-    padding: 20px;
     gap: 20px;
+    flex-wrap: wrap; /* Makes it look good on mobile */
+    margin-top: 30px;
 }
 
-.box {
-    background: white;
+/* The Box (Card) around the buttons */
+.card {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 15px;
+    border: 2px solid var(--accent-green);
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Button Styling */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    margin-top: 15px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: 0.3s; /* Smooth hover effect */
+}
+
+.btn:hover {
+    transform: scale(1.05); /* Grows slightly when mouse touches it */
+}
+
+/* Different Colors for Different Buttons */
+.farmer-bg { background-color: #2e7d32; } /* Dark Green */
+.buyer-bg  { background-color: #689f38; } /* Medium Green */
+.admin-bg  { background-color: #546e7a; } /* Greyish Green */
+
+/* Footer */
+.info-section {
+    margin-top: 50px;
     padding: 20px;
-    border-radius: 12px;
-    width: 50%;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    font-style: italic;
+    color: var(--primary-green);
+}
+/* Styling for Login and Add Product Forms */
+.login-container {
+    max-width: 400px;
+    margin: 100px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    border: 1px solid var(--accent-green);
 }
 
-textarea {
-    height: 100px;
-    resize: none;
+.login-container input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Important for width */
+}
+
+label {
+    display: block;
+    text-align: left;
+    font-weight: bold;
+    margin-top: 10px;
 }
